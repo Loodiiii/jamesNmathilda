@@ -8,3 +8,8 @@ html,
 body{
     scroll-behavior: smooth;
 }
+
+.container1{
+    height: 100vh;
+    background: url(../images/home-1.jpg);
+}

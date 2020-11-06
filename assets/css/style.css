@@ -12,4 +12,6 @@ body{
 .container1{
     height: 100vh;
     background: url(../images/home-1.jpg);
+    background-position: center;
+    background-size: cover;
 }

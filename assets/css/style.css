@@ -1,3 +1,7 @@
+/*  ---------------
+    DEFAULT STYLING
+    ---------------   */
+
 * {
     padding: 0;
     margin: 0;
@@ -7,18 +11,30 @@
 html,
 body{
     scroll-behavior: smooth;
-    font-family: unset;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root{
-    --darkGreen: rgb(78, 154, 126);
+    --darkGreen: rgb(62, 158, 120);
     --yellow: rgb(246, 236, 123);
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .container{
     width: 100%;
     height: auto;
-    padding: 0 20%;
+    padding: 0 15%;
 }
 
 button{
@@ -43,9 +59,9 @@ a{
     text-decoration: none;
 }
 
-/*  ---------------
-    DEFAULT STYLING
-    ---------------   */
+    /*  ---------------------
+    FIRST SECTION STARTS HERE
+    --------------------   */
 
 .container1{
     height: 100vh;
@@ -58,6 +74,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 15px;
 }
 
 .header-logo{
@@ -80,7 +97,6 @@ header{
     cursor: pointer;
 }
 
-
 #header-arrow-down{
     min-width: 10px;
     min-height: 10px;
@@ -90,4 +106,59 @@ header{
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg) translateY(-5px);
     margin-left: 23px;
+}
+
+.header-nav{
+    display: flex;
+    
+}
+
+.header-nav nav{
+    margin-right: 10px;
+}
+
+.header-nav nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav nav ul li{
+    text-transform: uppercase;
+    margin: 0 10px;
+}
+
+.nav-current-section{
+    color: white;
+}
+
+.vr{
+    border-left: 2px solid rgba(116, 123, 129, .6);
+    height: 15px;
+    outline: none;
+    margin: 0 15px;
+}
+
+.ordered-services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ordered-services div{
+    margin-top: -4px;
+}
+
+.ordered-services p{
+    color: white;
+    font-weight: 500;
+}
+
+.ordered-services .flex-column p{
+    font-size: 15px;
+    color: rgb(109, 122, 130);
+}
+
+.ordered-services span{
+    color: var(--darkGreen);
 }

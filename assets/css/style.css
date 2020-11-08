@@ -7,11 +7,87 @@
 html,
 body{
     scroll-behavior: smooth;
+    font-family: unset;
 }
+
+:root{
+    --darkGreen: rgb(78, 154, 126);
+    --yellow: rgb(246, 236, 123);
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    padding: 0 20%;
+}
+
+button{
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    color: var(--yellow);
+    background-color: transparent;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+/*  ---------------
+    DEFAULT STYLING
+    ---------------   */
 
 .container1{
     height: 100vh;
     background: url(../images/home-1.jpg);
     background-position: center;
     background-size: cover;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.logo{
+    background: url(../images/logo.png);
+    width: 250px;
+    height: 52px;
+}
+
+.header-logo p{
+    color: var(--darkGreen);
+    font-size: 1em;
+    margin-left: 30px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+
+#header-arrow-down{
+    min-width: 10px;
+    min-height: 10px;
+    border: solid var(--darkGreen);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg) translateY(-5px);
+    margin-left: 23px;
 }

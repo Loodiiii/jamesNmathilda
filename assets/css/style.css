@@ -2,6 +2,8 @@
     DEFAULT STYLING
     ---------------   */
 
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -12,6 +14,7 @@ html,
 body{
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
 :root{
@@ -38,7 +41,7 @@ body{
 }
 
 button{
-    padding: 20px 40px;
+    padding: 15px 40px;
     border: none;
     outline: none;
     text-transform: uppercase;
@@ -68,13 +71,19 @@ a{
     background: url(../images/home-1.jpg);
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header{
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
+    padding: 0 15%;
+    padding-top: 20px;
+    width: 100%;
 }
 
 .header-logo{
@@ -97,15 +106,20 @@ header{
     cursor: pointer;
 }
 
-#header-arrow-down{
+.arrow{
     min-width: 10px;
     min-height: 10px;
-    border: solid var(--darkGreen);
+    border: solid white;
     border-width: 0 3px 3px 0;
     display: inline-block;
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg) translateY(-5px);
+    -webkit-transform: rotate(45deg);
+}
+
+.header-arrow-down{
+    border: solid var(--darkGreen);
     margin-left: 23px;
+    border-width: 0 3px 3px 0;
 }
 
 .header-nav{
@@ -161,4 +175,78 @@ header{
 
 .ordered-services span{
     color: var(--darkGreen);
+}
+
+.flex-column{
+    cursor: pointer;
+}
+
+
+.s1-bottom{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(47, 58, 62);
+    width: 100%;
+}
+
+
+
+    /*  ------------------------
+    ABOUT US SECTION STARTS HERE
+    -----------------------   */
+
+.container4{
+    background: url(../images/about-us-background.jpg);
+    background-size: cover;
+    background-position-y: -300px;
+    background-repeat: no-repeat;
+    padding: 100px 15% 120px 15%;
+}
+
+.about-us-couple{
+    background: url(../images/james-and-mathilda.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 68px;
+    height: 38px;
+    margin-bottom: 3%;
+}
+
+.about-us-flex{
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-us-flex h1{
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+.about-us-right{
+    width: 65%;
+}
+
+.about-us-right p:first-child{
+    margin-bottom: 5%;
+    font-family: 'Zilla Slab', serif;
+    font-weight: 500;
+}
+
+.yours-sincerely{
+    justify-content: space-between;
+}
+
+.yours-sincerely button{
+    border: 3px solid var(--yellow);
+}
+
+.yours-sincerely button a{
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.yours-sincerely-1 p{
+    font-style: italic;
 }

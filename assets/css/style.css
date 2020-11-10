@@ -20,6 +20,7 @@ body{
 :root{
     --darkGreen: rgb(62, 158, 120);
     --yellow: rgb(246, 236, 123);
+    --gray: rgba(116, 123, 129, .6);
 }
 
 .flex{
@@ -45,6 +46,7 @@ button{
     border: none;
     outline: none;
     text-transform: uppercase;
+    border: 3px solid var(--yellow);
     color: var(--yellow);
     background-color: transparent;
 }
@@ -66,15 +68,44 @@ a{
     FIRST SECTION STARTS HERE
     --------------------   */
 
+
 .container1{
     height: 100vh;
-    background: url(../images/home-1.jpg);
     background-position: center;
+    background-image: url(../images/home-1.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+
+    /* animation: changeBgd 10s infinite;
+
+    animation-name: changeBgd;
+    animation-duration: 13s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-direction: alternate; */
 }
+
+@keyframes changeBgd {
+    0%{
+        background-image: url(../images/home-1.jpg);
+    }
+    25%{
+        background-image: url(../images/home-2.jpg);
+    }
+    50%{
+        background-image: url(../images/home-3.jpg);
+    }
+    75%{
+        background-image: url(../images/home-4.jpg);
+    }
+}
+
+
 
 header{
     position: fixed;
@@ -147,10 +178,40 @@ header{
 }
 
 .vr{
-    border-left: 2px solid rgba(116, 123, 129, .6);
+    border-left: 2px solid var(--gray);
     height: 15px;
     outline: none;
     margin: 0 15px;
+}
+
+.s1-content button{
+    border-radius: 6px;
+    padding: 15px 25px;
+}
+
+.s1-content button:hover{
+    cursor: pointer;
+}
+
+.s1-content button a{
+    font-weight: 500;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+.s1-content button a span{
+    transform: translateY(-5px) rotate(45deg);
+    animation: floating .5s infinite alternate linear;
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(-3px) rotate(45deg);
+    }
+    100%{
+        transform: translateY(2px) rotate(45deg);
+    }
 }
 
 .ordered-services{
@@ -189,9 +250,54 @@ header{
     align-items: center;
     background-color: rgb(47, 58, 62);
     width: 100%;
+    padding: 5% 15%;
+    margin-top: -160px;
 }
 
+.s1-bottom-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.s1-bottom-item img{
+    margin-bottom: 15px;
+}
+
+.s1-bottom-item p{
+    text-align: center;
+    font-size: .9em;
+}
+
+.s1-bottom-vertical{
+    border-left: 1px solid var(--gray);
+    height: 150px;
+    margin: 0 3%;
+}
+
+    /*  --------------------------
+    CONTACT US SECTION STARTS HERE
+    -------------------------   */
+
+.container3{
+    background-color: rgb(50, 167, 115);
+    height: auto;
+    padding: 70px 0;
+}
+
+.contact-us-title{
+    width: 100%;
+    text-align: center;
+}
+
+.contact-us-title h1{
+    font-size: 2.5em;
+}
+
+.contact-us-title p{
+    color: rgba(255, 255, 255, .7);
+}
 
     /*  ------------------------
     ABOUT US SECTION STARTS HERE
@@ -229,7 +335,7 @@ header{
 }
 
 .about-us-right p:first-child{
-    margin-bottom: 5%;
+    margin-bottom: 8%;
     font-family: 'Zilla Slab', serif;
     font-weight: 500;
 }
@@ -240,13 +346,52 @@ header{
 
 .yours-sincerely button{
     border: 3px solid var(--yellow);
+    border-radius: 6px;
+}
+
+.yours-sincerely button:hover{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .yours-sincerely button a{
     font-weight: 400;
     font-size: 1.5em;
+    display: flex;
+    align-items: center;
 }
 
 .yours-sincerely-1 p{
     font-style: italic;
+}
+
+.yours-sincerely-arrow{
+    transform: rotate(-45deg);
+    border: solid var(--yellow);
+    border-width: 0px 2px 2px 0;
+    min-width: 12px;
+    min-height: 12px;
+    margin-left: 15px;
+}
+
+    /*  --------------
+    FOOTER STARTS HERE
+    -------------   */
+
+.container5{
+    background-color: #ffffff;
+    padding: 50px 15%;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright{
+    justify-content: flex-start;
+}
+
+#green{
+    color: var(--darkGreen);
 }

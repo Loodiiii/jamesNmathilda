@@ -19,7 +19,7 @@ body{
 
 :root{
     --darkGreen: rgb(62, 158, 120);
-    --yellow: rgb(246, 236, 123);
+    --yellow: rgb(255, 228, 114);
     --gray: rgba(116, 123, 129, .6);
 }
 
@@ -38,7 +38,7 @@ body{
 .container{
     width: 100%;
     height: auto;
-    padding: 0 15%;
+    padding: 0 18%;
 }
 
 button{
@@ -77,10 +77,9 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
-    /* animation: changeBgd 10s infinite;
-
+    transition: 2s;
+    /* animation: 2s changeBgd infinite; */
+    /* 
     animation-name: changeBgd;
     animation-duration: 13s;
     animation-fill-mode: forwards;
@@ -89,7 +88,6 @@ a{
     animation-play-state: running;
     animation-direction: alternate; */
 }
-
 @keyframes changeBgd {
     0%{
         background-image: url(../images/home-1.jpg);
@@ -104,7 +102,6 @@ a{
         background-image: url(../images/home-4.jpg);
     }
 }
-
 
 
 header{
@@ -184,23 +181,41 @@ header{
     margin: 0 15px;
 }
 
-.s1-content button{
-    border-radius: 6px;
-    padding: 15px 25px;
+.s1-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 80px;
+    transition: .4s;
 }
 
-.s1-content button:hover{
+.s1-content h1{
+    font-weight: 200;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.view-all-services{
+    border-radius: 6px;
+    padding: 15px 25px;
+    margin-top: 100px;
+}
+
+.view-all-services:hover{
     cursor: pointer;
 }
 
-.s1-content button a{
+.view-all-services a{
     font-weight: 500;
     font-size: 1.2em;
     display: flex;
     align-items: center;
 }
 
-.s1-content button a span{
+.view-all-services a span{
     transform: translateY(-5px) rotate(45deg);
     animation: floating .5s infinite alternate linear;
 }
@@ -250,7 +265,7 @@ header{
     align-items: center;
     background-color: rgb(47, 58, 62);
     width: 100%;
-    padding: 5% 15%;
+    padding: 3% 15%;
     margin-top: -160px;
 }
 
@@ -283,7 +298,7 @@ header{
 .container3{
     background-color: rgb(50, 167, 115);
     height: auto;
-    padding: 70px 0;
+    padding: 90px 20%;
 }
 
 .contact-us-title{
@@ -297,6 +312,89 @@ header{
 
 .contact-us-title p{
     color: rgba(255, 255, 255, .7);
+}
+
+.contact-us-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 8%;
+}
+
+.contact-us-phone{
+    width: 28%;
+    margin-right: 100px;
+}
+
+.contact-us-phone p{
+    margin-top: 20px;
+}
+
+#phone-img{
+    width: 30px;
+    transform: translateY(5px);
+}
+
+#call-us{
+    color: var(--yellow);
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 6px;
+}
+
+#phone-number{
+    color: rgb(28, 67, 48);
+}
+
+#email-img{
+    width: 30px;
+}
+
+#email-us{
+    color: var(--yellow);
+    font-size: 2em;
+    margin-left: 5px;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 150%;
+    margin-top: 25px;
+}
+
+form input{
+    margin-bottom: 35px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    padding: 8px 13px;
+    font-size: 1.3em;
+    color: #fff;
+    width: 75%;
+}
+
+form input:nth-child(3){
+    width: 100%;
+}
+
+form input::placeholder{
+    font-size: 1em;
+}
+
+form button{
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form button img{
+    margin-left: 15px;
 }
 
     /*  ------------------------
@@ -347,6 +445,7 @@ header{
 .yours-sincerely button{
     border: 3px solid var(--yellow);
     border-radius: 6px;
+    padding: 15px 45px;
 }
 
 .yours-sincerely button:hover{
@@ -357,7 +456,7 @@ header{
 
 .yours-sincerely button a{
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 1.2em;
     display: flex;
     align-items: center;
 }

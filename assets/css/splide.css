@@ -1,0 +1,127 @@
+/*  ---------------
+    DEFAULT STYLING
+    ---------------   */
+
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+:root{
+    --darkGreen: rgb(62, 158, 120);
+    --yellow: rgb(255, 228, 114);
+    --gray: rgba(116, 123, 129, .6);
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    padding: 0 15%;
+}
+
+button{
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    border: 3px solid var(--yellow);
+    color: var(--yellow);
+    background-color: transparent;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+.splide{
+    width: 100%;
+}
+
+.splide__pagination{
+    top: 200px;
+}
+
+.splide__pagination__page{
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    transition: .3s;
+}
+
+.splide__pagination__page.is-active{
+    background: transparent;
+}
+
+.splide__slide{
+    border: none;
+}
+
+.slide1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.slide-content p{
+    text-align: center;
+    padding: 0 10%;
+}
+
+.slide-content p span{
+    color: var(--yellow);
+    font-style: italic;
+}
+
+.slide-content p span:first-child{
+    color: #ffffff;
+}
+
+.slide-content p:nth-child(2){
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.slide1 img{
+    width: 96px;
+    height: 90px;
+}
+
+.slide-content img{
+    margin: 0 auto;
+    display: block;
+    width: inherit;
+    height: inherit;
+}

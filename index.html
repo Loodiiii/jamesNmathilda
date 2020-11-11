@@ -7,6 +7,10 @@
     <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/97f2f1eb3e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
+    <link rel="stylesheet" href="assets/css/splide.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -40,7 +44,34 @@
         <div class="container container1">
 
             <div class="s1-content">
-                <button><a href="">VIEW ALL SERVICES<span class="arrow yours-sincerely-arrow"></span></a></button>
+                <h1>Pleased to meet you!</h1>
+
+                <div class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide slide1">
+                                <img src="assets/images/james-selected.png" alt="James">
+                                <div class="slide-content">
+                                    <p>My name is <span>James</span>, your trusted partner at the service you need, at home or where it is needed. Have a look at the different services i can offer you. Choose the <span>service you need</span> and <span>plan it into my agenda</span>. Hope to see you soon!</p>
+                                    <p>With the best regards,</p>
+                                    <img src="assets/images/james-signature.png" alt="James">
+                                </div>
+                                <img src="assets/images/mathilda.png" alt="Mathilda">
+                            </li>
+                            <li class="splide__slide slide1">
+                                <img src="assets/images/mathilda-selected.png" alt="Mathilda">
+                                <div class="slide-content">
+                                   <p>My name is <span>James</span>, your trusted partner at the service you need, at home or where it is needed. Have a look at the different services i can offer you. Choose the <span>service you need</span> and <span>plan it into my agenda</span>. Hope to see you soon!</p>
+                                   <p>With the best regards,</p>
+                                   <img src="assets/images/james-signature.png" alt="James">
+                                </div>
+                                <img src="assets/images/james.png" alt="James">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="view-all-services"><a href="">VIEW ALL SERVICES<span class="arrow yours-sincerely-arrow"></span></a></button>
             </div>
 
         </div>
@@ -76,14 +107,28 @@
                 <p>Our personal and professional approach is the key to happiness of our clients.</p>
             </div>
 
+
+
             <div class="contact-us-content">
+
                 <div class="contact-us-phone">
-
+                    <img id="phone-img" src="assets/images/phone.png" alt="phone"><span id="call-us">Call us:</span>
+                    <p>We are happy to help!<br> Call us <span id="phone-number">+381 (0)6 244 99 358</span> or contact us via email form.</p>
                 </div>
+
                 <div class="contact-us-mail">
-
+                    <img id="email-img" src="assets/images/email.png" alt="email"><span id="email-us">Email us: </span>
+                    <form>
+                        <input type="text" placeholder="Your name">
+                        <input type="email" placeholder="Your e-mail">
+                        <input type="text" placeholder="Your message here..."></input>
+                        <button>SEND MESSAGE <img src="assets/images/email-arrow.png"></button>
+                    </form>
                 </div>
+
             </div>
+
+
         </div>
     </section>
 

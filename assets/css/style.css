@@ -291,6 +291,63 @@ header{
     margin: 0 3%;
 }
 
+    /*  ----------------------------
+    OUR SERVICES SECTION STARTS HERE
+    ---------------------------   */
+
+.container2{
+    background: rgb(240, 238, 225);
+    padding: 100px 0;
+}
+
+.container2 h1:first-child{
+    color: rgba(42, 59, 69, 1);
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#after-reservation{
+    color: rgba(42, 59, 69, .7);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.our-services-order{
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+
+
+.order-item{
+    padding: 40px 25px;
+    margin: 15px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 370px;
+    height: 355px;
+}
+
+.order-item h1{
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+    margin-top: 10%;
+}
+
+.item-paragraph{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
     /*  --------------------------
     CONTACT US SECTION STARTS HERE
     -------------------------   */
@@ -383,7 +440,10 @@ form input:nth-child(3){
 }
 
 form input::placeholder{
-    font-size: 1em;
+    font-size: .75em;
+    opacity: 1;
+    color: #fff;
+    font-weight: 600;
 }
 
 form button{

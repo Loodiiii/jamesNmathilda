@@ -15,7 +15,7 @@
 </head>
 <body>
     <section id="s1">
-        <header>
+        <header class="header-appear">
             <div class="header-logo">
                 <div class="logo">
 
@@ -32,8 +32,12 @@
                         <div class="vr"></div>
                       </ul>
                 </nav>
+                <div class="menu-btn">
+                    <div class="menu-btn__burger">
+                    </div>
+                </div>
                 <div class="ordered-services">
-                    <p>Ordered services<span>(0)</span></p>
+                    <p>Ordered services<span id="ordered-items">(0)</span></p>
                     <div class="flex-column">
                         <p>View & checkout <img src="assets/images/arrow.png" alt="arrow"></p>
                     </div>
@@ -68,7 +72,7 @@
                         </ul>
                     </div>
                 </div>
-                <button class="view-all-services"><a href="">VIEW ALL SERVICES<span class="arrow yours-sincerely-arrow"></span></a></button>
+                <button class="view-all-services hovering-buttons"><a class="hovering-anchor" id="view-all-a" href="">VIEW ALL SERVICES<span class="arrow yours-sincerely-arrow hovering-arrow"></span></a></button>
             </div>
         </div>
 
@@ -245,7 +249,7 @@
                             <p>Yours sincerely,</p>
                             <img src="assets/images/james-and-mathilda-signature.png" alt="couple">
                         </div>
-                            <button><a href="">MORE ABOUT US<span class="arrow yours-sincerely-arrow"></span></a></button>
+                            <button class="hovering-buttons"><a class="hovering-anchor" href="">MORE ABOUT US<span class="arrow yours-sincerely-arrow hovering-arrow"></span></a></button>
                     </div>
                 </div>
             </div>
@@ -258,7 +262,7 @@
     <footer>
         <div class="container container5">
             <div class="copyright flex">
-                <p>Copyright © <span id="currentYear"></span>James&Mathilda. All right reserved.</p>
+                <p>Copyright © 2015 James&Mathilda. All right reserved.</p>
                 <p class="vr"></p>
                 <p>FAQ</p>
                 <p class="vr"></p>

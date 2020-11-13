@@ -21,6 +21,7 @@ body{
     --darkGreen: rgb(62, 158, 120);
     --yellow: rgb(255, 228, 114);
     --gray: rgba(116, 123, 129, .6);
+    --burger: rgba(47, 58, 62, .2);
 }
 
 .flex{
@@ -64,10 +65,65 @@ a{
     text-decoration: none;
 }
 
+.green{
+    border: 5px solid green;
+}
+
     /*  ---------------------
     FIRST SECTION STARTS HERE
     --------------------   */
 
+
+    /* Burger styling */
+
+.menu-btn {
+    position: relative;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--burger);
+    transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before, .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--burger);
+    transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before {
+    transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+    transform: translateY(16px);
+}
+
+
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
 
 .container1{
     height: 100vh;
@@ -78,7 +134,9 @@ a{
     justify-content: center;
     align-items: center;
     transition: 2s;
-    /* animation: 2s changeBgd infinite; */
+
+    animation: 40s changeBgd infinite;
+    -moz-animation: 40s changeBgd infinite;
     /* 
     animation-name: changeBgd;
     animation-duration: 13s;
@@ -103,15 +161,20 @@ a{
     }
 }
 
-
 header{
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15%;
-    padding-top: 20px;
+    padding: 20px 15% 15px 15%;
     width: 100%;
+    transition: all .7s;
+    top: -150px;
+}
+
+.header-appear {
+    top: 0px;
+    transition: all 0.7s;
 }
 
 .header-logo{
@@ -202,10 +265,12 @@ header{
     border-radius: 6px;
     padding: 15px 25px;
     margin-top: 100px;
+    transition: .3s;
 }
 
 .view-all-services:hover{
     cursor: pointer;
+    transition: .7s;
 }
 
 .view-all-services a{
@@ -419,7 +484,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 150%;
+    width: 200%;
     margin-top: 25px;
 }
 
@@ -427,7 +492,7 @@ form input{
     margin-bottom: 35px;
     outline: none;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #fff;
     background: transparent;
     padding: 8px 13px;
     font-size: 1.3em;
@@ -448,7 +513,7 @@ form input::placeholder{
 
 form button{
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1em;
     cursor: pointer;
 }
@@ -506,12 +571,12 @@ form button img{
     border: 3px solid var(--yellow);
     border-radius: 6px;
     padding: 15px 45px;
+    transition: .3s;
 }
 
 .yours-sincerely button:hover{
-    border: none;
-    background-color: transparent;
     cursor: pointer;
+    transition: .7s;
 }
 
 .yours-sincerely button a{
@@ -553,4 +618,26 @@ form button img{
 
 #green{
     color: var(--darkGreen);
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1650px){
+    .order-item{
+        width: 250px;
+        height: 280px;
+        margin: 13px;
+        padding: 40px 15px;
+    }
+    .order-item img {
+        width: 80px;
+    }
+    .order-item h1 {
+        font-size: 1em;
+    }
+    .order-item p{
+        font-size: .9em;
+    }
 }

@@ -125,3 +125,22 @@ a{
     width: inherit;
     height: inherit;
 }
+
+/* -- MEDIA QUERIES -- */
+
+@media (max-width: 1440px){
+    .splide__pagination{
+        top: 210px;
+    }
+    .splide__pagination__page{
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+    }
+}
+
+@media (max-width: 1366px){
+    .splide__pagination{
+        top: 150px;
+    }
+}

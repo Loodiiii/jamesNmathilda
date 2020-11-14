@@ -133,10 +133,11 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 2s;
+    transition: 1s;
 
-    animation: 40s changeBgd infinite;
-    -moz-animation: 40s changeBgd infinite;
+    animation: 28s changeBgd infinite;
+    -moz-animation: 28s changeBgd infinite;
+    -webkit-animation: 28s changeBgd infinite;
     /* 
     animation-name: changeBgd;
     animation-duration: 13s;
@@ -150,13 +151,25 @@ a{
     0%{
         background-image: url(../images/home-1.jpg);
     }
+    20%{
+        background-image: url(../images/home-1.jpg);
+    }
     25%{
+        background-image: url(../images/home-2.jpg);
+    }
+    45%{
         background-image: url(../images/home-2.jpg);
     }
     50%{
         background-image: url(../images/home-3.jpg);
     }
+    70%{
+        background-image: url(../images/home-3.jpg);
+    }
     75%{
+        background-image: url(../images/home-4.jpg);
+    }
+    95%{
         background-image: url(../images/home-4.jpg);
     }
 }
@@ -639,5 +652,132 @@ form button img{
     }
     .order-item p{
         font-size: .9em;
+    }
+
+}
+
+@media (max-width: 1440px){
+    .s1-bottom{
+        margin-top: -120px;
+        padding: 2% 15%;
+    }
+    .slide-content p{
+        padding: 0 7%;
+    }
+}
+
+@media (max-width: 1366px){
+    p{
+        font-size: .8em;
+    }
+    a{
+        font-size: .8em;
+    }
+    nav ul li a{
+        font-size: .8em;
+    }
+    .header-logo p{
+        font-size: .8em;
+    }
+    .logo{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 200px;
+        height: 42px;
+    }
+    .contact-us-title h1{
+        font-size: 2em;
+    }
+    #phone-img{
+        width: 27px;
+    }
+    #call-us{
+        font-size: 1.8em;
+    }
+    #email-img{
+        width: 27px;
+    }
+    #email-us{
+        font-size: 1.8em;
+    }
+    .contact-us-phone p{
+        font-size: .9em;
+    }
+    form{
+        width: 170%;
+    }
+    form input{
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 1280px){
+    .slide1 img{
+        width: 82px;
+        height: auto;
+    }
+    .ordered-services .flex-column p{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1176px){
+    .container{
+        padding: 0 10%;
+    }
+    header{
+        padding:  15px 10%;
+    }
+    .view-all-services a{
+        font-size: 1em;
+    }
+    .yours-sincerely-arrow{
+        min-width: 10px;
+        min-height: 10px;
+    }
+    .s1-bottom{
+        padding: 2% 11%;
+    }
+    .s1-bottom-item p{
+        font-size: .8em;
+    }
+    .container2{
+        padding:  80px 0; 
+    }
+    .order-item{
+        width: 210px;
+        height: 250px;
+    }
+    .order-item img{
+        width: 65px;
+    }
+    .order-item p{
+        font-size: .8em;
+    }
+    .container2 h1:first-child{
+        font-size: 2em;
+    }
+    #after-reservation{
+        font-size: 1em;
+    }
+    .container3{
+        padding: 70px 10%;
+    }
+    .contact-us-phone{
+        margin-right: 50px;
+        width: 31%;
+    }
+    .container4{
+        padding: 70px 10% 80px 10%;
+    }
+    .yours-sincerely button a{
+        font-size: 1em;
+    }
+    .about-us-flex h1{
+        font-size: 2.5em;
+    }
+    .container5{
+        padding: 30px 10%;
     }
 }

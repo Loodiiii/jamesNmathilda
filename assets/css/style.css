@@ -331,6 +331,10 @@ header{
     color: var(--darkGreen);
 }
 
+.ordered-items{
+    transition: all .4s;
+}
+
 .flex-column{
     cursor: pointer;
 }
@@ -418,6 +422,11 @@ header{
     color: rgba(0, 0, 0, 0.85);
     font-weight: 500;
     margin-top: 10%;
+    text-align: center;
+}
+
+.order-item p{
+    text-align: center;
 }
 
 .item-paragraph{
@@ -779,5 +788,54 @@ form button img{
     }
     .container5{
         padding: 30px 10%;
+    }
+}
+
+@media (max-width: 1024px){
+    .header-logo p{
+        margin-left: 20px;
+    }
+    .header-nav nav ul li{
+        margin: 0 5px;
+    }
+    .s1-content h1{
+        font-size: 2em;
+    }
+    .vr{
+        margin: 0 10px;
+    }
+    .slide1 img{
+        width: 75px;
+    }
+    .s1-bottom{
+        padding: 2% 10%;
+    }
+    .s1-bottom-item img{
+        width: 32px;
+    }
+    .s1-bottom-vertical{
+        height: 100px;
+    }
+    .s1-bottom-item p{
+        font-size: .7em;
+    }
+    .our-services-order{
+        margin-top: 35px;
+    }
+    .order-item{
+        width: 160px;
+        height: 210px;
+    }
+    .order-item img{
+        width: 50px;
+    }
+    .order-item h1{
+        font-size: .9em;
+    }
+    .order-item p{
+        font-size: .7em;
+    }
+    form{
+        width: 160%;
     }
 }

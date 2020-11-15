@@ -89,24 +89,84 @@ messageButton.addEventListener("click", () => {
 
 })
 
+// header white nav on scrolling
+
+const s1Top = document.querySelector("#s1").offsetTop
+const ourServicesTop = document.querySelector("#our-services").offsetTop
+const aboutUsTop = document.querySelector("#about-us").offsetTop
+const contactUsTop = document.querySelector("#contact-us").offsetTop
+
+const listElements = document.querySelectorAll(".list-header")
+
+window.addEventListener("scroll", () => {
+    let windowYoffset = window.pageYOffset
+    let i = 0;
+
+    if(windowYoffset < ourServicesTop){
+        let p = 0;
+        while(p <= listElements.length){
+            if(listElements[p].classList.contains("nav-current-section")){
+                listElements[p].classList.remove("nav-current-section")
+            }
+            p++;
+        }
+        i = 0;
+    } else if (ourServicesTop < windowYoffset && windowYoffset < contactUsTop){
+        let p = 0;
+        while(p <= listElements.length){
+            if(listElements[p].classList.contains("nav-current-section")){
+                listElements[p].classList.remove("nav-current-section")
+            }
+            p++;
+        }
+        i = 1;
+    } else if(contactUsTop < windowYoffset && windowYoffset < aboutUsTop){
+        let p = 0;
+        while(p <= listElements.length){
+            if(listElements[p].classList.contains("nav-current-section")){
+                listElements[p].classList.remove("nav-current-section")
+            }
+            p++;
+        }
+        i = 2;
+    } else{
+        let p = 0;
+        while(p <= listElements.length){
+            if(listElements[p].classList.contains("nav-current-section")){
+                listElements[p].classList.remove("nav-current-section")
+            }
+            p++;
+        }
+        i = 3;
+    }
+
+    listElements[i].classList.add("nav-current-section")
+})
 
 
 
 // ordering
 
 const items = document.querySelectorAll(".order-item")
-for(let i = 0; i <= items.length; i++){
-    items[i].addEventListener("click", function(){
-        if(items[i].classList.contains("green")){
-            items[i].classList.remove("green")
-        }else{
-            items[i].classList.add("green")
-        }
-        
-    const orderedItems = document.querySelectorAll(".green")
-    let orderedGreenItems = document.querySelector("#ordered-items")
-    orderedGreenItems.innerHTML = "(" + orderedItems.length + ")";
-    })
+function ordering(){
+    for(let i = 0; i <= items.length; i++){
+        items[i].addEventListener("click", function(){
+            if(items[i].classList.contains("green")){
+                items[i].classList.remove("green")
+            }else{
+                items[i].classList.add("green")
+            }
+            
+        const orderedItems = document.querySelectorAll(".green")
+        let orderedGreenItems = document.querySelector("#ordered-items")
+        orderedGreenItems.innerHTML = "(" + orderedItems.length + ")";
+        })
+    }
 }
+
+window.addEventListener("click", () => {
+    ordering();
+})
+
 
 

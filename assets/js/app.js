@@ -175,4 +175,20 @@ for(let i = 0; i < items.length; i++){
     })
 }
 
+// form validation
 
+const form = document.querySelector("form")
+const name = document.querySelector("#name")
+const email = document.querySelector("#email")
+
+form.addEventListener("submit", (e) => {
+    let messages = [];
+
+    if( name.value === "" || name.value == null){
+        messages.push("Name is required")
+    }
+    if(messages.length > 0){
+        e.preventDefault();
+    }
+
+})

@@ -599,7 +599,6 @@ form button img{
 }
 
 
-
 /* MEDIA QUERIES */
 
 @media (max-width: 1650px){
@@ -1189,6 +1188,12 @@ form button img{
     }
 }
 
+@media (max-width: 450px){
+    .copyright p{
+        font-size: .3em;
+    }
+}
+
 @media (max-width: 440px){
     .ordered-services{
         position: fixed;
@@ -1208,7 +1213,6 @@ form button img{
         width: 140px;
     }
 }
-
 
 @media (max-width: 425px){
     form{
@@ -1245,10 +1249,6 @@ form button img{
     .ordered-services{
         transform: translate(-60%, -20%);
     }
-}
-
-@media (max-width: 375px){
-    
 }
 
 @media (max-width: 350px){

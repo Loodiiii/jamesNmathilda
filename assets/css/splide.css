@@ -144,3 +144,36 @@ a{
         top: 150px;
     }
 }
+
+@media (max-width: 914px){
+    .splide__pagination{
+        top: 160px
+    }
+}
+
+@media (max-width: 768px){
+    .splide__pagination{
+        top: 190px;
+    }
+}
+
+@media (max-width: 510px){
+    .splide__pagination{
+        top: 145px;
+    }
+    .splide__pagination__page{
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        border: 1px solid #ffffff;
+    }
+}
+
+@media (max-width: 470px){
+    .splide__pagination__page{
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        border: 1px solid #ffffff;
+    }
+}

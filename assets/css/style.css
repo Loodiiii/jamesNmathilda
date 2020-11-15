@@ -15,6 +15,7 @@ body{
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
     color: white;
+    overflow-x: hidden;
 }
 
 :root{
@@ -73,56 +74,8 @@ a{
     FIRST SECTION STARTS HERE
     --------------------   */
 
-
-    /* Burger styling */
-
-.menu-btn {
-    position: relative;
-    /* display: flex; */
+.menu-btn{
     display: none;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-}
-.menu-btn__burger {
-    width: 50px;
-    height: 6px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px var(--burger);
-    transition: all .5s ease-in-out;
-}
-.menu-btn__burger::before, .menu-btn__burger::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 6px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px var(--burger);
-    transition: all .5s ease-in-out;
-}
-.menu-btn__burger::before {
-    transform: translateY(-16px);
-}
-.menu-btn__burger::after {
-    transform: translateY(16px);
-}
-
-
-.menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-}
-.menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-}
-.menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
 }
 
 .container1{
@@ -134,10 +87,13 @@ a{
     justify-content: center;
     align-items: center;
     transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transition: all 1s;
 
     animation: 28s changeBgd infinite;
     -moz-animation: 28s changeBgd infinite;
     -webkit-animation: 28s changeBgd infinite;
+    -o-animation: 28s changeBgd infinite;
     /* 
     animation-name: changeBgd;
     animation-duration: 13s;
@@ -679,6 +635,9 @@ form button img{
     p{
         font-size: .8em;
     }
+    #after-reservation{
+        font-size: 1em;
+    }
     a{
         font-size: .8em;
     }
@@ -723,7 +682,7 @@ form button img{
 
 @media (max-width: 1280px){
     .slide1 img{
-        width: 82px;
+        min-width: 82px;
         height: auto;
     }
     .ordered-services .flex-column p{
@@ -779,6 +738,7 @@ form button img{
     }
     .container4{
         padding: 70px 10% 80px 10%;
+        background-position-y: -190px;
     }
     .yours-sincerely button a{
         font-size: 1em;
@@ -805,7 +765,7 @@ form button img{
         margin: 0 10px;
     }
     .slide1 img{
-        width: 75px;
+        min-width: 75px;
     }
     .s1-bottom{
         padding: 2% 10%;
@@ -837,5 +797,471 @@ form button img{
     }
     form{
         width: 160%;
+    }
+}
+
+@media (max-width: 950px){
+    .copyright p{
+        font-size: .7em;
+    }
+    .follow-us p{
+        font-size: .7em;
+    }
+}
+
+@media (max-width: 900px){
+    nav{
+        right: -33%;
+        display: inline-block;
+        margin-right: 0 !important;
+        position: fixed;
+        height: 100vh;
+        width: 33%;
+        top: 0;
+        background: rgb(47, 58, 62);
+        transition: 1s;
+        z-index: 101;
+    }
+
+    /* Burger styling */
+
+    .menu-btn {
+        position: relative;
+        display: flex;
+        /* display: none; */
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        z-index: 101;
+    }
+    .menu-btn__burger {
+        width: 40px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px var(--burger);
+        transition: all .5s ease-in-out;
+    }
+    .menu-btn__burger::before, .menu-btn__burger::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px var(--burger);
+        transition: all .5s ease-in-out;
+    }
+    .menu-btn__burger::before {
+        transform: translateY(-13px);
+    }
+    .menu-btn__burger::after {
+        transform: translateY(13px);
+    }
+
+    .menu-btn.open .menu-btn__burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+    }
+    .menu-btn.open .menu-btn__burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .menu-btn.open .menu-btn__burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+    .nav-open{
+        right: 0;
+        transition: all 1s;
+    }
+    .header-appear{
+        z-index: 100;
+    }
+    .ordered-services{
+        z-index: 101;
+    }
+    .header-nav nav ul{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-nav nav ul{
+        font-size: 2.5em;
+    }
+    .vr{
+        display: none;
+    }
+    .copyright .vr{
+        display: block;
+    }
+
+    .s1-bottom{
+        flex-direction: column;
+        padding: 7% 10%;
+    }
+    .s1-bottom-vertical{
+        border-top: 3px solid var(--gray);
+        width: 80%;
+        height: 0;
+        margin: 7% 0;
+    }
+    .s1-bottom-item img{
+        width: 100px;
+    }
+    .s1-bottom-item p{
+        font-size: 1em;
+    }
+
+    .container3{
+        padding: 70px 20%;
+    }
+    .contact-us-content{
+        flex-direction: column;
+        margin-top: 0;
+        padding-top: 8%;
+    }
+    .contact-us-phone{
+        margin-right: 0;
+        margin-bottom: 10%;
+        width: 50%;
+    }
+    form {
+        width: 200%;
+    }
+    #after-reservation{
+        font-size: .8em;
+    }
+
+    .about-us-flex{
+        flex-direction: column;
+    }
+    .about-us-couple{
+        margin-bottom: 0%;
+    }
+    .about-us-flex h1{
+        margin-bottom: 3%;
+    }
+    .about-us-right{
+        width: 100%;
+    }
+    .about-us-right p:first-child{
+        font-size: 1em;
+        font-weight: 400;
+    }
+    .container4{
+        background-position-y: -130px;
+    }
+    .yours-sincerely-arrow{
+        z-index: 90;
+    }
+}
+
+@media (max-width: 850px){
+    nav{
+        width: 38%;
+        right: -38%;
+    }
+    .copyright p{
+        font-size: .6em;
+    }
+    .container5{
+        padding: 15px 10%;
+    }
+}
+
+@media (max-width: 768px){
+    header{
+        padding: 0px 10%;
+    }
+    .logo{
+        width: 171px;
+        height: 36px;
+    }
+    .container3{
+        padding:  60px 10%;
+    }
+    .container5{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .copyright{
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px){
+    .container4{
+        background-position-y: top;
+    }
+}
+
+@media (max-width: 743px){
+    .order-item{
+        width: 270px;
+        height: 320px;
+        padding: 40px 20px;
+    }
+    .order-item img{
+        width: 80px;
+    }
+    .order-item h1{
+        font-size: 1.3em;
+    }
+    .order-item p{
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 710px){
+    nav{
+        width: 42%;
+        right: -42%;
+    }
+}
+
+@media (max-width: 660px){
+    nav{
+        width: 45%;
+        right: -45%;
+    }
+    .header-logo p{
+        display: none;
+    }
+    .slide1 img{
+        min-width: 60px;
+    }
+    .slide-content p{
+        padding: 0 3%;
+    }
+    .slide-content p{
+        font-size: .7em;
+    }
+    .about-us-flex h1{
+        margin-bottom: 5%;
+    }
+    .yours-sincerely-1 img{
+        width: 160px;
+    }
+}
+
+@media (max-width: 610px){
+    nav{
+        width: 47%;
+        right: -47%;
+    }
+    .order-item{
+        width: 230px;
+        height: 290px;
+        padding: 40px 20px;
+    }
+    .order-item img{
+        width: 70px;
+    }
+    .order-item h1{
+        font-size: 1.1em;
+    }
+    .order-item p{
+        font-size: .8em;
+    }
+    #after-reservation{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 570px){
+    form{
+        width: 150%;
+    }
+    nav{
+        width: 50%;
+        right: -50%;
+    }
+}
+
+@media (max-width: 540px){
+    nav{
+        width: 52%;
+        right: -52%;
+    }
+    .header-nav{
+        flex-direction: row-reverse;
+    }
+    .logo{
+        width: 142px;
+        height: 30px;
+    }
+    .ordered-services p{
+        font-size: .7em;
+    }
+    .ordered-services .flex-column p{
+        font-size: .65em;
+        margin-top: 4px;
+    }
+    .s1-content h1{
+        font-size: 1.7em;
+    }
+    .about-us-couple{
+        width: 54px;
+        height: 30px;
+    }
+    .about-us-flex h1{
+        font-size: 2em;
+    }
+    .about-us-right p:first-child{
+        font-size: .85em;
+    }
+    .s1-bottom-item img{
+        width: 70px;
+    }
+    .s1-bottom-item p{
+        font-size: .9em;
+    }
+    .order-item{
+        width: 200px;
+        height: 260px;
+    }
+    .order-item img{
+        width: 60px;
+    }
+    .green{
+        border: 3px solid green;
+    }
+    .yours-sincerely button{
+        padding: 13px 30px
+    }
+    .view-all-services{
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 510px){
+    .s1-content h1{
+        font-size: 1.9em;
+    }
+    .slide-content p{
+        font-size: .6em;
+    }
+    .slide1 img{
+        min-width: 50px;
+    }
+    .ordered-services{
+        margin-right: -10px;
+    }
+}
+
+@media (max-width: 470px){
+    .order-item{
+        width: 170px;
+        height: 240px;
+    }
+    .order-item p{
+        font-size: .7em;
+    }
+    .s1-bottom-item img{
+        width: 60px;
+    }
+    .s1-bottom-item p{
+        font-size: .85em;
+    }
+    .slide-content p{
+        font-size: .45em;
+    }
+    .s1-content h1{
+        font-size: 1.5em;
+    }
+    .jamesSign{
+        width: 58px;
+        height: 28px;
+    }
+    .copyright p{
+        font-size: .4em;
+    }
+    .follow-us p{
+        font-size: .5em;
+    }
+}
+
+@media (max-width: 440px){
+    .ordered-services{
+        position: fixed;
+        top: 20%;
+        right: -50%;
+        transform: translate(-70%, -20%);
+        transition: 1s;
+    }
+    .ordered-services-open{
+        right: 0;
+        transition: 1s;
+    }
+    .yours-sincerely button{
+        padding: 15px 25px;
+    }
+    .yours-sincerely-1 img{
+        width: 140px;
+    }
+}
+
+
+@media (max-width: 425px){
+    form{
+        width: 120%;
+    }
+    .order-item{
+        width: 140px;
+        height: 190px;
+    }
+    .order-item img{
+        width: 40px;
+    }
+    .order-item h1{
+        font-size: .9em;
+    }
+    .order-item p{
+        font-size: .6em;
+    }
+    .ordered-services{
+        transform: translate();
+    }
+    .yours-sincerely-1 img{
+        width: 110px;
+    }
+    .yours-sincerely button{
+        padding: 15px 20px;
+    }
+    .about-us-right p:first-child{
+        font-size: .65em;
+    }
+}
+
+@media (max-width: 390px){
+    .ordered-services{
+        transform: translate(-60%, -20%);
+    }
+}
+
+@media (max-width: 375px){
+    
+}
+
+@media (max-width: 350px){
+    .ordered-services{
+        transform: translate(-50%, -20%);
+    }
+    form{
+        width: 100%;
+    }
+    .yours-sincerely-1 img{
+        width: 85px;
+    }
+    .yours-sincerely button{
+        padding: 10px 15px;
     }
 }
